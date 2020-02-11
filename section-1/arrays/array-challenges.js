@@ -22,6 +22,10 @@ const getAnyItem = (arr, position) => {
   // e.g. getAnyItem(['a','b','c'], 1) should return 'b'
   // e.g. getAnyItem(['a','b','c'], 3) should return 'a'
   // e.g. getAnyItem(['a','b','c'], 5) should return 'c' etc...
+
+  const remainder = position % arr.length 
+
+  return arr[remainder]
 };
 
 const getMiddle = arr => {
