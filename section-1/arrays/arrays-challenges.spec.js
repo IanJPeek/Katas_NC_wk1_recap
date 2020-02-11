@@ -7,7 +7,7 @@ const {
   getMiddle,
 } = require('./array-challenges');
 
-describe.only('accessing arrays', () => {
+describe('accessing arrays', () => {
   describe('getLastElement()', () => {
     it('can access last element of an array', () => {
       const words = ['hello', 'there', 'I', 'am', 'coding!'];
@@ -68,7 +68,7 @@ describe.only('accessing arrays', () => {
     });
   });
 
-  describe('getMiddle()', () => {
+  describe.only('getMiddle()', () => {
     it('can access middle item for an array containing one item', () => {
       const arr = ['LEEDS!'];
       const actual = getMiddle(arr);
