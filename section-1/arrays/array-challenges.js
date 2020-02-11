@@ -1,5 +1,7 @@
 const getLastElement = arr => {
   // should return the last item in a given array
+  const lastItem = arr[arr.length - 1];
+  return lastItem
 };
 
 const getOuterSum = arr => {

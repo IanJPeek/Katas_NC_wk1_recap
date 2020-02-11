@@ -8,7 +8,7 @@ const {
 } = require('./array-challenges');
 
 describe('accessing arrays', () => {
-  describe('getLastElement()', () => {
+  describe.only('getLastElement()', () => {
     it('can access last element of an array', () => {
       const words = ['hello', 'there', 'I', 'am', 'coding!'];
       const actual = getLastElement(words);
