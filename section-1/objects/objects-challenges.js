@@ -20,10 +20,16 @@ const checkHasProperty = (obj, key) => {
 
 const removeName = person => {
   // remove the name property from a person
+
+  delete person.name;
+  return person;
 };
 
 const removeProperty = (obj, key) => {
   // remove the key value pair from an object
+
+  delete obj[key];
+  return obj;
 };
 
 const addProperty = (obj, keyValuePair) => {
@@ -31,6 +37,13 @@ const addProperty = (obj, keyValuePair) => {
   // e.g. ["name","mitch"]
   // use this pair to add the key value pair to a new obj with all the properties of the old obj
   // addProperty({job: 'teacher'},['name','mitch']) // should return {job: 'teacher', name: 'mitch }
+
+  if (keyValuePair === undefined) {
+    return obj;
+  }
+
+  obj[keyValuePair[0]] = keyValuePair[1];
+  return obj;
 };
 
 module.exports = {

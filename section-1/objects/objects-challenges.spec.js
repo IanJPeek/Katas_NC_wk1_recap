@@ -55,7 +55,7 @@ describe('object practice', function () {
     });
   });
 
-  describe.only("removeName()", () => {
+  describe("removeName()", () => {
     it("removes the name property from an object", () => {
       const author = {
         name: "Zadie Smith",
@@ -66,34 +66,34 @@ describe('object practice', function () {
     });
   });
 
-  describe('removeProperty()', () => {
-    it('removes a given property from an object', () => {
+  describe("removeProperty()", () => {
+    it("removes a given property from an object", () => {
       const oscarWinner = {
-        title: 'Moonlight',
-        director: 'Barry Jenkins',
+        title: "Moonlight",
+        director: "Barry Jenkins"
       };
-      let actual = removeProperty(oscarWinner, 'title');
-      expect(actual).to.eql({ director: 'Barry Jenkins' });
+      let actual = removeProperty(oscarWinner, "title");
+      expect(actual).to.eql({ director: "Barry Jenkins" });
     });
-    it('repeatedly removes given properties from a object', () => {
+    it("repeatedly removes given properties from a object", () => {
       const oscarWinner = {
-        title: 'Moonlight',
-        director: 'Barry Jenkins',
+        title: "Moonlight",
+        director: "Barry Jenkins"
       };
-      let actual = removeProperty(oscarWinner, 'title');
-      expect(actual).to.eql({ director: 'Barry Jenkins' });
-      actual = removeProperty(oscarWinner, 'director');
+      let actual = removeProperty(oscarWinner, "title");
+      expect(actual).to.eql({ director: "Barry Jenkins" });
+      actual = removeProperty(oscarWinner, "director");
       expect(actual).to.eql({});
     });
-    it('returns the same object if a property inside the object is passed', () => {
+    it("returns the same object if a property inside the object is passed", () => {
       const oscarWinner = {
-        title: 'Moonlight',
-        director: 'Barry Jenkins',
+        title: "Moonlight",
+        director: "Barry Jenkins"
       };
-      let actual = removeProperty(oscarWinner, 'cast');
+      let actual = removeProperty(oscarWinner, "cast");
       expect(actual).to.eql({
-        title: 'Moonlight',
-        director: 'Barry Jenkins',
+        title: "Moonlight",
+        director: "Barry Jenkins"
       });
     });
   });
