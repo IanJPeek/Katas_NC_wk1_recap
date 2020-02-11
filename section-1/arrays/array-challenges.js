@@ -23,8 +23,8 @@ const getAnyItem = (arr, position) => {
   // e.g. getAnyItem(['a','b','c'], 3) should return 'a'
   // e.g. getAnyItem(['a','b','c'], 5) should return 'c' etc...
 
-  const remainder = position % arr.length 
-  return arr[remainder]
+  const remainder = position % arr.length;
+  return arr[remainder];
 };
 
 const getMiddle = arr => {
@@ -35,16 +35,14 @@ const getMiddle = arr => {
   // e.g. getMiddle([42, 20, 13, 6, 100]) // should return [13]
 
   //ODD single middle in an array
-if (arr.length % 2 === 1){
- return [arr[(arr.length-1)/2]]
-}
+  if (arr.length % 2 === 1) {
+    return [arr[(arr.length - 1) / 2]];
+  }
 
-//EVEN pair of middles in array
-if (arr.length % 2 === 0){
-  return ([(arr[(arr.length / 2)-1]), arr[arr.length / 2]]);
-}
-
-
+  //EVEN pair of middles in array
+  if (arr.length % 2 === 0) {
+    return [arr[arr.length / 2 - 1], arr[arr.length / 2]];
+  }
 };
 
 module.exports = {

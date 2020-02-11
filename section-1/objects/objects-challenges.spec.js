@@ -40,29 +40,29 @@ describe('object practice', function () {
     });
   });
 
-  describe('checkHasProperty()', () => {
-    it('can check if a given object has a particular property', () => {
+  describe("checkHasProperty()", () => {
+    it("can check if a given object has a particular property", () => {
       const author = {
-        name: 'Zadie Smith',
-        debut: 'White Teeth',
+        name: "Zadie Smith",
+        debut: "White Teeth"
       };
-      let actual = checkHasProperty(author, 'name');
+      let actual = checkHasProperty(author, "name");
       expect(actual).to.be.true;
-      actual = checkHasProperty(author, 'debut');
+      actual = checkHasProperty(author, "debut");
       expect(actual).to.be.true;
-      actual = checkHasProperty(author, 'prizes');
+      actual = checkHasProperty(author, "prizes");
       expect(actual).to.be.false;
     });
   });
 
-  describe('removeName()', () => {
-    it('removes the name property from an object', () => {
+  describe.only("removeName()", () => {
+    it("removes the name property from an object", () => {
       const author = {
-        name: 'Zadie Smith',
-        debut: 'White Teeth',
+        name: "Zadie Smith",
+        debut: "White Teeth"
       };
       let actual = removeName(author);
-      expect(actual).to.eql({ debut: 'White Teeth' });
+      expect(actual).to.eql({ debut: "White Teeth" });
     });
   });
 

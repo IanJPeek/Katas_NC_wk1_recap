@@ -68,7 +68,7 @@ describe('accessing arrays', () => {
     });
   });
 
-  describe.only('getMiddle()', () => {
+  describe('getMiddle()', () => {
     it('can access middle item for an array containing one item', () => {
       const arr = ['LEEDS!'];
       const actual = getMiddle(arr);

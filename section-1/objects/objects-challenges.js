@@ -1,15 +1,21 @@
 const accessName = person => {
   // given a person object of the form { name: 'Bob', age: 42 }
   // should access the name value to return 'Bob'
+
+  return person.name;
 };
 
 const accessObject = (obj, key) => {
   // should access the value in an obj given a key
+
+  return obj[key];
 };
 
 const checkHasProperty = (obj, key) => {
   // should check if an obj has a key-value pair
   // this function should return a boolean
+
+  return obj.hasOwnProperty(key);
 };
 
 const removeName = person => {
@@ -33,5 +39,5 @@ module.exports = {
   checkHasProperty,
   removeName,
   removeProperty,
-  addProperty,
+  addProperty
 };
