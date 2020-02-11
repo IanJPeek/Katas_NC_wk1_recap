@@ -8,7 +8,7 @@ const {
 } = require('./array-challenges');
 
 describe('accessing arrays', () => {
-  describe.only('getLastElement()', () => {
+  describe('getLastElement()', () => {
     it('can access last element of an array', () => {
       const words = ['hello', 'there', 'I', 'am', 'coding!'];
       const actual = getLastElement(words);
@@ -17,7 +17,7 @@ describe('accessing arrays', () => {
     });
   });
 
-  describe('getOuterSum()', () => {
+  describe.only('getOuterSum()', () => {
     it('can get the outer sum of an array of two numbers', () => {
       const numberPair = [100, 3];
       const actual = getOuterSum(numberPair);

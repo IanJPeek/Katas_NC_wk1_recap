@@ -1,7 +1,7 @@
 const getLastElement = arr => {
   // should return the last item in a given array
   const lastItem = arr[arr.length - 1];
-  return lastItem
+  return lastItem;
 };
 
 const getOuterSum = arr => {
@@ -10,6 +10,9 @@ const getOuterSum = arr => {
   // e.g. [10,5] should return 15
   // e.g. [40,3,2] should return 42
   // e.g. [3,4,5,6,1,7] should return 10
+
+  if (arr.length === 1) return arr[0];
+  else return arr[0] + arr[arr.length - 1];
 };
 
 const getAnyItem = (arr, position) => {
@@ -26,12 +29,12 @@ const getMiddle = arr => {
   // returns the middle two items in an array for arr of even length
   // e.g. getMiddle(['a']) // should return 'a'
   // e.g. getMiddle([42, 20, 13, 6]) // should return [20, 13]
-  // e.g. getMiddle([42, 20, 13, 6, 100]) // should return [13] 
+  // e.g. getMiddle([42, 20, 13, 6, 100]) // should return [13]
 };
 
 module.exports = {
   getLastElement,
   getOuterSum,
   getAnyItem,
-  getMiddle,
+  getMiddle
 };
