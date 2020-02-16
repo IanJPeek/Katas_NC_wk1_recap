@@ -10,8 +10,8 @@ const codeStrings = require('./regex-data/code-strings');
 
 describe('regex-problems', () => {
   describe('extractTotal()', () => {
-    it('can find the total from a single code string', () => {
-      const inputCode = 'abcd67yuio';
+    it("can find the total from a single code string", () => {
+      const inputCode = "abcd67yuio";
       const actual = extractTotal(inputCode);
       const desiredOutcome = 67;
       expect(actual).to.equal(desiredOutcome);
@@ -34,28 +34,28 @@ describe('regex-problems', () => {
     });
   });
 
-  describe('removeComments()', () => {
-    it('can remove a single comment from a string', () => {
-      let inputCode = '// abc';
+  describe("removeComments()", () => {
+    it("can remove a single comment from a string", () => {
+      let inputCode = "// abc";
       let actual = removeComments(inputCode);
-      let desiredOutcome = '';
+      let desiredOutcome = "";
       expect(actual).to.equal(desiredOutcome);
-      inputCode = '//abc';
+      inputCode = "//abc";
       actual = removeComments(inputCode);
-      desiredOutcome = '';
+      desiredOutcome = "";
       expect(actual).to.equal(desiredOutcome);
     });
-    it('can remove a single comment from a string on two lines', () => {
-      let inputCode = 'const sum = (a,b) => a + b;\n// abc';
+    it("can remove a single comment from a string on two lines", () => {
+      let inputCode = "const sum = (a,b) => a + b;\n// abc";
       let actual = removeComments(inputCode);
-      let desiredOutcome = 'const sum = (a,b) => a + b;\n';
+      let desiredOutcome = "const sum = (a,b) => a + b;\n";
       expect(actual).to.equal(desiredOutcome);
     });
-    it('can remove multiple comments from a string', () => {
+    it("can remove multiple comments from a string", () => {
       let inputCode =
-        'const sum = (a, b) => a + b;\n//something to be ignored\n// another comment intended for humans';
+        "const sum = (a, b) => a + b;\n//something to be ignored\n// another comment intended for humans";
       let actual = removeComments(inputCode);
-      let desiredOutcome = 'const sum = (a, b) => a + b;\n\n';
+      let desiredOutcome = "const sum = (a, b) => a + b;\n\n";
       expect(actual).to.equal(desiredOutcome);
     });
   });

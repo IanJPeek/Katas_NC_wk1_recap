@@ -3,11 +3,28 @@ const extractTotal = codeStrings => {
   // separated strings to find the total of the numbers
   // embedded in each string
   // use the tests to help guide you in your logic
+
+const findNumbers = /\d*/g
+const foundNumbers = codeStrings.match(findNumbers);
+let sumUp = 0
+foundNumbers.map(number => sumUp = sumUp + +number)
+
+return sumUp
+
 };
 
 const removeComments = text => {
   // this function should remove comments
   // from a string of text
+
+  // RE-Examine
+//   const findComments = /[//\w]/g
+//   const foundComments = text.match(findComments)
+// let clipped = text.replace(foundComments, "")
+//   console.log(text,"text", foundComments, "comments", clipped, "clipped")
+//   return clipped
+
+
 };
 
 const getIDs = divs => {
